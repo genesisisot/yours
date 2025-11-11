@@ -337,7 +337,7 @@ And youuu — Lately, Got a lover's mind.`
         onClick={onClose}
         className="fixed right-6 md:right-8 z-50 text-[rgb(255,180,51)] hover:text-white transition-colors"
         style={{
-          top: 'max(1.5rem, env(safe-area-inset-top, 1.5rem))',
+          top: 'calc(env(safe-area-inset-top, 0px) + 1.5rem)',
         }}
         whileHover={{ scale: 1.15, rotate: 90 }}
         whileTap={{ scale: 0.9 }}
@@ -346,7 +346,13 @@ And youuu — Lately, Got a lover's mind.`
       </motion.button>
 
       {/* Main Player */}
-      <div className="relative z-10 min-h-full flex items-center justify-center p-3 md:p-12 py-20 md:py-12">
+      <div
+        className="relative z-10 min-h-full flex items-center justify-center p-3 md:p-12"
+        style={{
+          paddingTop: 'calc(env(safe-area-inset-top, 0px) + 5rem)',
+          paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 5rem)',
+        }}
+      >
         <div className="w-full max-w-5xl my-6 md:my-12">
           
           {/* EP Title */}

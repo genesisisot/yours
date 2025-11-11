@@ -87,8 +87,8 @@ export default function App() {
                   <div
                     className="items-center flex flex-col size-full justify-center gap-12 md:gap-8 z-[2] px-1 md:px-4"
                     style={{
-                      paddingTop: 'env(safe-area-inset-top)',
-                      paddingBottom: 'env(safe-area-inset-bottom)',
+                      paddingTop: 'calc(env(safe-area-inset-top, 0px) + 3rem)',
+                      paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 3rem)',
                     }}
                   >
                     <motion.h1
@@ -256,8 +256,8 @@ export default function App() {
                   <div
                     className="absolute inset-0 flex items-center justify-center z-[40] cursor-pointer"
                     style={{
-                      paddingTop: 'env(safe-area-inset-top)',
-                      paddingBottom: 'env(safe-area-inset-bottom)',
+                      paddingTop: 'calc(env(safe-area-inset-top, 0px) + 3rem)',
+                      paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 3rem)',
                     }}
                     onClick={startAudio}
                   >
