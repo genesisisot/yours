@@ -166,8 +166,8 @@ export default function App() {
                           className="items-center flex font-bold justify-center uppercase text-sm sm:text-lg md:text-xl lg:text-[24px]"
                           style={{ fontFamily: "Prompt, sans-serif" }}
                         >
-                          <p aria-label="Open your heart to the Sound" className="pointer-events-none uppercase whitespace-nowrap">
-                            {["Open", "your", "heart", "to", "the", "Sound"].map((word, wordIndex) => (
+                          <p aria-label="enter" className="pointer-events-none uppercase whitespace-nowrap">
+                            {["enter"].map((word, wordIndex) => (
                               <span key={wordIndex} className="inline-block">
                                 {word.split("").map((char, charIndex) => (
                                   <motion.span
@@ -176,7 +176,7 @@ export default function App() {
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{
-                                      delay: 1.2 + (wordIndex * word.length + charIndex) * 0.05,
+                                      delay: 1.2 + charIndex * 0.05,
                                       duration: 0.3
                                     }}
                                     style={{ textDecoration: "rgb(22, 22, 19)" }}
@@ -184,7 +184,6 @@ export default function App() {
                                     {char}
                                   </motion.span>
                                 ))}
-                                {wordIndex < 5 && " "}
                               </span>
                             ))}
                           </p>
@@ -230,7 +229,7 @@ export default function App() {
                   initial={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="h-screen overflow-hidden fixed w-screen left-0 top-0 right-0 bottom-0 bg-black z-[30]"
+                  className="h-screen overflow-hidden fixed w-screen left-0 top-0 right-0 bottom-0 bg-black z-[2000]"
                 >
                   {/* Background Image */}
                   <img
