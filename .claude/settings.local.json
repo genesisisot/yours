@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b)",
+      "Bash(dir c:UsersSpacecowbluesDownloadsddd /s)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(dir /s /b \"WhatsApp Video*\")",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(move \"WhatsApp Video 2025-11-11 at 01.59.37_e544436b.mp4\" \"src\\assets\\intro-video.mp4\")",
+      "Bash(netstat:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

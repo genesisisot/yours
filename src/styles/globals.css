@@ -1,0 +1,50 @@
+
+@font-face {
+font-display: swap;
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 400;
+font-stretch: normal;
+unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+src: url('https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F13dadc7c5b140de8748bc9203573b93931451126?generation=1762803026766392&alt=media') format('woff2');
+}
+
+@font-face {
+font-display: swap;
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 900;
+font-stretch: normal;
+unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+src: url('https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F74b9b3274498b3656ecbcacd0b384ca674c134cc?generation=1762803026760808&alt=media') format('woff2');
+}
+
+@font-face {
+font-display: swap;
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 700;
+font-stretch: normal;
+unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+src: url('https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F05c1fe730299524b9fbd5d7a2e4e5ddb4397fa12?generation=1762803026740866&alt=media') format('woff2');
+}
+
+@font-face {
+font-display: auto;
+font-family: 'Times New Roman';
+font-style: normal;
+font-weight: normal;
+font-stretch: normal;
+unicode-range: U+0-10FFFF;
+src: url('https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2Fd9d9ad4ba85fcd9dbe69e7866613756f1dbb4e97?generation=1759754407144805&alt=media') format('woff2');
+}
+
+@font-face {
+font-display: swap;
+font-family: 'kashmir';
+font-style: normal;
+font-weight: normal;
+font-stretch: normal;
+unicode-range: U+0-10FFFF;
+src: url('https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F2c516247ae41f112d2b9a767b88f262844df6ee1?generation=1762803026741799&alt=media') format('woff2');
+}
