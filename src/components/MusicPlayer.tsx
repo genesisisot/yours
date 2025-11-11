@@ -182,12 +182,12 @@ And youuu — Lately, Got a lover's mind.`
 
   const currentSong = songs[currentSongIndex];
 
-  // Vinyl rotation animation
+  // Vinyl rotation animation - optimized for mobile
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setRotation((prev) => (prev + 2) % 360);
-      }, 50);
+        setRotation((prev) => (prev + 3) % 360);
+      }, 100); // Reduced frequency for better performance
       return () => clearInterval(interval);
     }
   }, [isPlaying]);
@@ -313,26 +313,12 @@ And youuu — Lately, Got a lover's mind.`
         backgroundImage: "url(\"https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F87e84226273c613c63877f5a945c2370a81c1973.avif?generation=1762803027041726&alt=media\")",
         perspective: '2000px',
         WebkitOverflowScrolling: 'touch',
+        transform: 'translateZ(0)',
+        WebkitTransform: 'translateZ(0)',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
       }}
     >
-      {/* Film Grain / Noise Texture */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-[50] opacity-40 mix-blend-overlay"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          backgroundRepeat: 'repeat',
-          animation: 'grain 0.5s steps(2) infinite',
-        }}
-      />
-
-      {/* VHS Scanlines */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-[45] opacity-20"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 4px)',
-          animation: 'scanlines 10s linear infinite',
-        }}
-      />
 
       {/* Same radial gradient overlay as landing page */}
       <div
@@ -342,26 +328,6 @@ And youuu — Lately, Got a lover's mind.`
         }}
       ></div>
 
-      {/* Add keyframes for animations */}
-      <style>{`
-        @keyframes grain {
-          0%, 100% { transform: translate(0, 0); }
-          10% { transform: translate(-5%, -10%); }
-          20% { transform: translate(-15%, 5%); }
-          30% { transform: translate(7%, -25%); }
-          40% { transform: translate(-5%, 25%); }
-          50% { transform: translate(-15%, 10%); }
-          60% { transform: translate(15%, 0%); }
-          70% { transform: translate(0%, 15%); }
-          80% { transform: translate(3%, 35%); }
-          90% { transform: translate(-10%, 10%); }
-        }
-        
-        @keyframes scanlines {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(10px); }
-        }
-      `}</style>
       
       {/* Close button */}
       <motion.button
