@@ -244,25 +244,41 @@ export default function App() {
                     className="absolute inset-0 flex items-center justify-center z-[40] cursor-pointer"
                     onClick={startAudio}
                   >
-                    <motion.h1
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 1, delay: 0.3 }}
-                      className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase text-center px-4"
-                      style={{
-                        fontFamily: 'kashmir, sans-serif',
-                        color: 'rgb(255, 180, 51)',
-                        textShadow: '0 0 20px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8), rgb(208, 149, 67) 0px 0px 10px, rgb(248, 227, 192) 0px 0px 15px, rgb(248, 227, 192) 0px 0px 30px, rgb(208, 149, 67) 0px 0px 42px',
-                        position: 'relative',
-                        zIndex: 50,
-                      }}
-                    >
-                      Yours Truly, Genesis
-                    </motion.h1>
+                    <div className="flex flex-col items-center gap-4 md:gap-6">
+                      <motion.h1
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase text-center px-4"
+                        style={{
+                          fontFamily: 'kashmir, sans-serif',
+                          color: 'rgb(255, 180, 51)',
+                          textShadow: '0 0 20px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8), rgb(208, 149, 67) 0px 0px 10px, rgb(248, 227, 192) 0px 0px 15px, rgb(248, 227, 192) 0px 0px 30px, rgb(208, 149, 67) 0px 0px 42px',
+                          position: 'relative',
+                          zIndex: 50,
+                        }}
+                      >
+                        Yours Truly, Genesis
+                      </motion.h1>
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.5, duration: 1 }}
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase text-center px-4"
+                        style={{
+                          fontFamily: 'Prompt, sans-serif',
+                          color: 'rgb(255, 255, 255)',
+                          textShadow: '0 0 15px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.8), rgb(208, 149, 67) 0px 0px 8px',
+                          letterSpacing: '0.05em'
+                        }}
+                      >
+                        by AsingerMustDie
+                      </motion.p>
+                    </div>
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 1.5, duration: 0.8 }}
+                      transition={{ delay: 2, duration: 0.8 }}
                       className="absolute bottom-20 text-white/70 text-sm md:text-base uppercase tracking-wider"
                       style={{ fontFamily: 'Prompt, sans-serif' }}
                     >
