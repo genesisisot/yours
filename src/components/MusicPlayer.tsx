@@ -335,7 +335,10 @@ And youuu — Lately, Got a lover's mind.`
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
         onClick={onClose}
-        className="fixed top-6 md:top-8 right-6 md:right-8 z-50 text-[rgb(255,180,51)] hover:text-white transition-colors"
+        className="fixed right-6 md:right-8 z-50 text-[rgb(255,180,51)] hover:text-white transition-colors"
+        style={{
+          top: 'max(1.5rem, env(safe-area-inset-top, 1.5rem))',
+        }}
         whileHover={{ scale: 1.15, rotate: 90 }}
         whileTap={{ scale: 0.9 }}
       >

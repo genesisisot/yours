@@ -84,7 +84,13 @@ export default function App() {
                       backgroundImage: "radial-gradient(49.111vw at 50vw 50vh, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55))"
                     }}
                   ></div>
-                  <div className="items-center flex flex-col size-full justify-center gap-12 md:gap-8 z-[2] px-1 md:px-4">
+                  <div
+                    className="items-center flex flex-col size-full justify-center gap-12 md:gap-8 z-[2] px-1 md:px-4"
+                    style={{
+                      paddingTop: 'env(safe-area-inset-top)',
+                      paddingBottom: 'env(safe-area-inset-bottom)',
+                    }}
+                  >
                     <motion.h1
                       initial={{ opacity: 0, y: -50 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -249,6 +255,10 @@ export default function App() {
                   {/* Centered Text Overlay */}
                   <div
                     className="absolute inset-0 flex items-center justify-center z-[40] cursor-pointer"
+                    style={{
+                      paddingTop: 'env(safe-area-inset-top)',
+                      paddingBottom: 'env(safe-area-inset-bottom)',
+                    }}
                     onClick={startAudio}
                   >
                     <div className="flex flex-col items-center gap-4 md:gap-6">
