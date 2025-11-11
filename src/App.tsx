@@ -239,6 +239,14 @@ export default function App() {
                     alt="Intro background"
                   />
 
+                  {/* Dark Gradient Overlay */}
+                  <div
+                    className="absolute inset-0 z-[35]"
+                    style={{
+                      background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%)'
+                    }}
+                  />
+
                   {/* Centered Text Overlay */}
                   <div
                     className="absolute inset-0 flex items-center justify-center z-[40] cursor-pointer"
