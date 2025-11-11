@@ -205,15 +205,22 @@ And youuu — Lately, Got a lover's mind.`
     const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
     const handleEnded = () => nextSong();
+    const handleError = (e: Event) => {
+      console.error('Audio loading error for', currentSong.title, ':', e);
+      console.error('Audio src:', audio.src);
+      console.error('Audio error:', audio.error);
+    };
 
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateDuration);
     audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('error', handleError);
 
     return () => {
       audio.removeEventListener('timeupdate', updateTime);
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('error', handleError);
     };
   }, [currentSongIndex]);
 
@@ -222,19 +229,37 @@ And youuu — Lately, Got a lover's mind.`
     if (!audio) return;
 
     // Reset audio when song changes
+    console.log('Loading song:', currentSong.title, currentSong.url);
     audio.load();
-    
+
     // Auto-play if isPlaying is true
     if (isPlaying) {
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log('Playback prevented:', error);
-          setIsPlaying(false);
-        });
-      }
+      // Wait for the audio to be loaded before playing
+      const handleCanPlay = () => {
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log('Playing:', currentSong.title);
+            })
+            .catch(error => {
+              console.error('Playback prevented for', currentSong.title, ':', error);
+              setIsPlaying(false);
+            });
+        }
+        audio.removeEventListener('canplay', handleCanPlay);
+      };
+
+      audio.addEventListener('canplay', handleCanPlay);
+
+      // Fallback: try to play after a short delay if canplay doesn't fire
+      setTimeout(() => {
+        if (audio.paused && isPlaying) {
+          audio.play().catch(err => console.error('Delayed play failed:', err));
+        }
+      }, 500);
     }
-  }, [currentSongIndex]);
+  }, [currentSongIndex, isPlaying]);
 
   const togglePlay = () => {
     if (audioRef.current) {
