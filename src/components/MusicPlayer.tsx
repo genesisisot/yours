@@ -159,7 +159,7 @@ I won't leave you, please... Don't come back.`
       title: "Yours Truly Genesis",
       artist: "AsingerMustDie",
       url: yoursTrulyGenesis,
-      lyrics: `My lovely, pretty Heiwa, Hold my hand — you will find peace. Follow me to the stars.
+      lyrics: `Oh Irene, My lovely, pretty Heiwa, Hold my hand — you will find peace. Follow me to the stars.
 Oh Maria, Bless you on your career. When I get home, We'll laugh, we'll dance, we'll crash — I'll be there soon.
 Oh my Sheila, Bet that you won't remember That I wasn't all bad. I changed — who cares, hope you're doing fineeee.
 It's yours truly, Yours truly, Genesis. Led by frail insecurities, But I promise, I try.
