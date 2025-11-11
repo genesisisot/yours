@@ -308,10 +308,11 @@ And youuu — Lately, Got a lover's mind.`
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black z-[2000] overflow-hidden bg-center bg-cover"
+      className="fixed inset-0 bg-black z-[2000] overflow-y-auto overflow-x-hidden bg-center bg-cover"
       style={{
         backgroundImage: "url(\"https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F87e84226273c613c63877f5a945c2370a81c1973.avif?generation=1762803027041726&alt=media\")",
         perspective: '2000px',
+        WebkitOverflowScrolling: 'touch',
       }}
     >
       {/* Film Grain / Noise Texture */}
@@ -376,7 +377,7 @@ And youuu — Lately, Got a lover's mind.`
       </motion.button>
 
       {/* Main Player */}
-      <div className="relative z-10 h-full flex items-center justify-center p-3 md:p-12 overflow-y-auto">
+      <div className="relative z-10 min-h-full flex items-center justify-center p-3 md:p-12 py-20 md:py-12">
         <div className="w-full max-w-5xl my-6 md:my-12">
           
           {/* EP Title */}
