@@ -129,10 +129,10 @@ I'm tired
 I'm so tired`
     },
     {
-      title: "Polaroids",
+      title: "Polaroid",
       artist: "AsingerMustDie",
       url: polaroids,
-      lyrics: `Heart is black, Look what you Made me do.
+      lyrics: `Polaroid, Heart is black, Look what you Made me do.
 I'd be damned, Curse my name — Do you care All the same?
 Why are you so cruel? Let me go, my dear. I can't fall, Fall in love anymore.
 Gave it all, All for you. So get far away from me — All because Of your stare. I'm a weak soul When you're here.
